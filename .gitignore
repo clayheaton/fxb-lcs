@@ -1,3 +1,4 @@
 *.ipynb
 .ipynb_checkpoints/
 .sqlite
+.DS_Store
