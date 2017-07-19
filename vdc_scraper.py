@@ -88,5 +88,8 @@ def main():
         if counter % 100 == 0:
             sleep(2)
 
+        if counter % 1000 == 0:
+            print("Processed Link ID",rec['id'])
+
 if __name__ == '__main__':
     main()
