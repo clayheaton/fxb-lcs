@@ -81,7 +81,7 @@ def main():
     # Skip if we've already harvested links
     # HOWEVER we don't know how many to harvest
     # Check nohup.out to make sure we don't need to start again.
-    if tab.count == 0:
+    if tab.count() == 0:
         # Populate the links table
         get_links_from_search(db, tab)
 
