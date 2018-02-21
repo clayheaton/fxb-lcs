@@ -92,6 +92,9 @@ def main():
     tab_ar = db['content_ar']
     tab_en = db['content_en']
 
+    print(tab_ar.count())
+    print(tab_en.count())
+
     counter = 0
 
     # Since we record which links we've harvested,
