@@ -66,8 +66,8 @@ def get_links_from_search(db, tab):
 
     print(len(link_list_ar), "LINKS HARVESTED")
     for link in link_list_ar:
-        en_link = link.replace("/ar/", "/en/")
-        rec = {"ar_link": link, "end_link": en_link}
+        end_link = link.replace("/ar/", "/en/")
+        rec = {"ar_link": link, "end_link": end_link}
         tab.insert(rec)
 
 def main():
@@ -134,9 +134,9 @@ def main():
 
         # English
         try:
-            content_table = get_content_table(rec['en_link'])
+            content_table = get_content_table(rec['end_link'])
             en = {"content":content_table,
-                  "url":rec['en_link'],
+                  "url":rec['end_link'],
                   "link_id":rec['id'],
                   "lang":"en",
                   "success":1}
@@ -144,7 +144,7 @@ def main():
             sleep(1)
         except:
             en = {"content":None,
-                  "url":rec['en_link'],
+                  "url":rec['end_link'],
                   "link_id":rec['id'],
                   "lang":"en",
                   "success":0}
