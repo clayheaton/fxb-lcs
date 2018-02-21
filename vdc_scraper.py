@@ -85,6 +85,10 @@ def main():
         # Populate the links table
         get_links_from_search(db, tab)
 
+    # Explicitly create the tables
+    db.create_table('content_ar')
+    db.create_table('content_en')
+
     tab_ar = db['content_ar']
     tab_en = db['content_en']
 
