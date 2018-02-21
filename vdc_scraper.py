@@ -90,10 +90,10 @@ def main():
     tab_ar = db['content_ar']
     tab_en = db['content_en']
 
-    rec = {"content":None, "url":None, "link_id": None, "lang": None, "success": None}
+    dummy = {"content":None, "url":None, "link_id": None, "lang": None, "success": None}
 
-    tab_ar.insert(rec)
-    tab_en.insert(rec)
+    tab_ar.insert(dummy)
+    tab_en.insert(dummy)
 
     print(tab_ar.count())
     print(tab_en.count())
