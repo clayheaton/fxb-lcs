@@ -86,14 +86,20 @@ def main():
         get_links_from_search(db, tab)
 
     # Explicitly create the tables
-    db.create_table('content_ar')
-    db.create_table('content_en')
 
     tab_ar = db['content_ar']
     tab_en = db['content_en']
 
+    rec = {"content":None, "url":None, "link_id": None, "lang": None, "success": None}
+
+    tab_ar.insert(rec)
+    tab_en.insert(rec)
+
     print(tab_ar.count())
     print(tab_en.count())
+
+    tab_ar.delete()
+    tab_en.delete()
 
     counter = 0
 
